@@ -1,0 +1,387 @@
+<<<<<<<<<  COMMENTS  <<<<<<<<<<<<<<<<<<
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< PROCESS 0 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+Honglis-MacBook-Pro:src honglixue$ javac -cp "gson-2.8.2.jar" Blockchain.java
+Honglis-MacBook-Pro:src honglixue$ java -cp ".:gson-2.8.2.jar" Blockchain 0
+
+Starting Process Server at the process 4740                
+Starting the Blockchain server 4930
+Starting UnverifiedBlock Server at the process 4820
+Starting Public Key Server at the process 4710
+
+Starting the Unverified Block Priority Queue Consumer thread.
+
+
+All Processes are Ready
+
+Got key from process 2
+Got key from process 1
+Got key from process 0
+Three keys are ready!
+
+----Create A Dummy Block in Blockchain List-----
+
+There are 4 options:                                                <<<<<<<< Console Commands start <<<<<<<
+1) Enter C for Credit
+2) Enter R for reading a file (or "R filename" to read another files)
+3) Enter V for verifying the entire blockchain 
+4) Enter L for listing blockchain   
+R                                                                   <<<<<<<<< Enter R in process 0 will read BlockInput0.txt <<<<<<<<<<
+                                      <<<<<<<<< Process will sleep for 10 seconds to wait for reading file, verifying block and putting it in blockchain for (2) <<<<<<<<<<<
+Reading file: BlockInput0.txt
+Added a record to unverified blocks: (Created by 0) John Smith
+[Consumer got a unverified block] John Smith
+Added a record to unverified blocks: (Created by 0) Joe Blow
+** NEW BLOCKCHAIN ** 1. John Smith (Created by 0, Verified by 1)
+** NEW BLOCKCHAIN ** 2. Joe Blow (Created by 0, Verified by 1)
+Added a record to unverified blocks: (Created by 0) Julie Wilson
+** NEW BLOCKCHAIN ** 3. Julie Wilson (Created by 0, Verified by 1)
+[Consumer got a unverified block] Joe Blow
+[Consumer got a unverified block] Julie Wilson
+Added a record to unverified blocks: (Created by 1) Rita Vita         <<<<<< at this moment, I entered R in process 1 <<<<<<<<<<
+[Consumer got a unverified block] Rita Vita
+Added a record to unverified blocks: (Created by 0) Wayne Blaine
+** NEW BLOCKCHAIN ** 4. Rita Vita (Created by 1, Verified by 2)
+Added a record to unverified blocks: (Created by 1) Wei Xu
+Added a record to unverified blocks: (Created by 1) Sally McCutty
+[Consumer got a unverified block] Wayne Blaine
+[Consumer got a unverified block] Wei Xu
+** NEW BLOCKCHAIN ** 5. Wayne Blaine (Created by 0, Verified by 0)
+Added a record to unverified blocks: (Created by 2) Helen Keller     <<<<<< at this moment, I entered R in process 2 <<<<<<<<<<
+** NEW BLOCKCHAIN ** 6. Wei Xu (Created by 1, Verified by 2)
+Added a record to unverified blocks: (Created by 1) Bruce Lee
+** NEW BLOCKCHAIN ** 7. Sally McCutty (Created by 1, Verified by 2)
+** NEW BLOCKCHAIN ** 8. Helen Keller (Created by 2, Verified by 2)
+Added a record to unverified blocks: (Created by 2) Abraham Lincoln
+Added a record to unverified blocks: (Created by 2) John Kennedy
+[Consumer got a unverified block] Sally McCutty
+[Consumer got a unverified block] Helen Keller
+[Consumer got a unverified block] Bruce Lee
+[Consumer got a unverified block] Abraham Lincoln
+** NEW BLOCKCHAIN ** 9. Bruce Lee (Created by 1, Verified by 0)
+[Consumer got a unverified block] John Kennedy
+** NEW BLOCKCHAIN ** 10. Abraham Lincoln (Created by 2, Verified by 0)
+Added a record to unverified blocks: (Created by 2) Joe DiMaggio
+** NEW BLOCKCHAIN ** 11. John Kennedy (Created by 2, Verified by 2)
+** NEW BLOCKCHAIN ** 12. Joe DiMaggio (Created by 2, Verified by 2)
+[Consumer got a unverified block] Joe DiMaggio
+
+
+There are 4 options:                                                <<<<<<<< After 10 seconds, Console Commands showing <<<<<<<
+1) Enter C for Credit
+2) Enter R for reading a file (or "R filename" to read another files)
+3) Enter V for verifying the entire blockchain 
+4) Enter L for listing blockchain 
+R AdditionalFile.txt                                               <<<<<<<< Try to read a file with name (R AdditionalFile.txt)  <<<<<<<
+                                       
+Reading file: AdditionalFile.txt
+Added a record to unverified blocks: (Created by 0) Alice X
+[Consumer got a unverified block] Alice X
+** NEW BLOCKCHAIN ** 13. Alice X (Created by 0, Verified by 0)
+
+
+There are 4 options:                                               <<<<<<<< After 10 seconds, Console Commands showing <<<<<<<
+1) Enter C for Credit
+2) Enter R for reading a file (or "R filename" to read another files)
+3) Enter V for verifying the entire blockchain 
+4) Enter L for listing blockchain 
+C                                                                  <<<<<<<<< Enter C to check credit <<<<<<<<<<
+Verification credit: P0 = 4, P1 = 3, P2 = 6                        <<<<<<<< Dummy block is not including here <<<<<<<
+
+
+There are 4 options: 
+1) Enter C for Credit
+2) Enter R for reading a file (or "R filename" to read another files)
+3) Enter V for verifying the entire blockchain 
+4) Enter L for listing blockchain 
+V                                                                    <<<<<<<<< Enter V to verify the entire blockchain <<<<<<<<<<
+Is Verifying.... 
+- the Proof-of-Work SHA-256-String.. 
+- the Hash created solves the puzzle.. 
+- the Signed-SHA256 signature.. 
+- the Signed-BlockID signature..
+Blocks 1 - 13 in the blockchain have been verified
+
+
+There are 4 options: 
+1) Enter C for Credit
+2) Enter R for reading a file (or "R filename" to read another files)
+3) Enter V for verifying the entire blockchain 
+4) Enter L for listing blockchain 
+L                                                                    <<<<<<<<< Enter L to list the entire blockchain <<<<<<<<<<
+13.  2020-05-24.10:52:390  Alice X 2020.02.02 222-22-2222 Cold Rest Water
+12.  2020-05-24.10:52:122  Joe DiMaggio 1914.11.25  111-22-3333 SoreKnees RestFromSports Aspirin
+11.  2020-05-24.10:52:112  John Kennedy 1917.05.29  333-45-6999 AddisonsDisease DrugTherapy Steroids
+10.  2020-05-24.10:52:102  Abraham Lincoln 1809.02.12 444-45-6888 GreviousWound Surgery Whiskey
+9.  2020-05-24.10:52:101  Bruce Lee 1940.11.27 456-789-123 SoreStomach LessCombat Vicodine
+8.  2020-05-24.10:52:092  Helen Keller 1880.06.27 666-45-6789 Arthritis WarmCloths Aspirin
+7.  2020-05-24.10:52:081  Sally McCutty 1970.01.01 123-456-999 Migraine IcePack Almotriptan
+6.  2020-05-24.10:52:071  Wei  Xu  1996.03.22 123-456-333 Shingles WaitForRelief Zovirax
+5.  2020-05-24.10:52:070  Wayne Blaine 1942.07.07 123-45-6777 Measles WaitToGetBetter CodLiverOil
+4.  2020-05-24.10:52:061  Rita Vita  1992.01.31 999-456-789 ObessivePersonality TryToRelax Ibuprofen
+3.  2020-05-24.10:52:060  Julie Wilson 1996.03.07 123-45-6999 Insomnia Exercise HotPeppers
+2.  2020-05-24.10:52:050  Joe  Blow  1996.03.07 123-45-6888 Smallpox BedRest Whiskey
+1.  2020-05-24.10:52:040  John Smith 1996.03.07 123-45-6789 Chickenpox BedRest aspirin
+0.  2020-05-24.10:51:550  Hongli Xue 0000.00.00 000-00-0000 0000 0000 00000
+
+
+There are 4 options: 
+1) Enter C for Credit
+2) Enter R for reading a file (or "R filename" to read another files)
+3) Enter V for verifying the entire blockchain 
+4) Enter L for listing blockchain 
+
+
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< PROCESS 1 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+Honglis-MacBook-Pro:src honglixue$ java -cp ".:gson-2.8.2.jar" Blockchain 1
+
+Starting Process Server at the process 4740
+Starting Public Key Server at the process 4711
+Starting the Blockchain server 4931
+Starting UnverifiedBlock Server at the process 4821
+
+Starting the Unverified Block Priority Queue Consumer thread.
+
+
+All Processes are Ready
+
+Got key from process 2
+Got key from process 1
+Got key from process 0
+Three keys are ready!
+
+----Create A Dummy Block in Blockchain List-----
+
+There are 4 options:                                                     <<<<<<<< Console Commands start <<<<<<<
+1) Enter C for Credit
+2) Enter R for reading a file (or "R filename" to read another files)
+3) Enter V for verifying the entire blockchain 
+4) Enter L for listing blockchain 
+                                                                     <<<<<<<<<<<<< I have not yet enter R in process 1 at this moment <<<<<<<<<<<<<
+Added a record to unverified blocks: (Created by 0) John Smith       <<<<<<<<<<<<< at this moment, I entered R in process 0 <<<<<<<<<<<<<<<<<<<<< 
+[Consumer got a unverified block] John Smith                         
+ 
+R                                                                    <<<<<<<<<<<<< Now, I entered R in process 1 <<<<<<<<<<<<<<<<<<<<<    
+Reading file: BlockInput1.txt
+
+Added a record to unverified blocks: (Created by 0) Joe Blow
+** NEW BLOCKCHAIN ** 1. John Smith (Created by 0, Verified by 1)
+[Consumer got a unverified block] Joe Blow
+** NEW BLOCKCHAIN ** 2. Joe Blow (Created by 0, Verified by 1)
+Added a record to unverified blocks: (Created by 0) Julie Wilson
+[Consumer got a unverified block] Julie Wilson
+** NEW BLOCKCHAIN ** 3. Julie Wilson (Created by 0, Verified by 1)
+Added a record to unverified blocks: (Created by 1) Rita Vita
+[Consumer got a unverified block] Rita Vita
+Added a record to unverified blocks: (Created by 0) Wayne Blaine
+** NEW BLOCKCHAIN ** 4. Rita Vita (Created by 1, Verified by 2)
+Added a record to unverified blocks: (Created by 1) Wei Xu
+Added a record to unverified blocks: (Created by 1) Sally McCutty
+** NEW BLOCKCHAIN ** 5. Wayne Blaine (Created by 0, Verified by 0)
+Added a record to unverified blocks: (Created by 2) Helen Keller      <<<<<< at this moment, I entered R in process 2 <<<<<<<<<<
+** NEW BLOCKCHAIN ** 6. Wei Xu (Created by 1, Verified by 2)
+[Consumer got a unverified block] Wayne Blaine
+[Consumer got a unverified block] Wei Xu
+[Consumer got a unverified block] Sally McCutty
+Added a record to unverified blocks: (Created by 1) Bruce Lee
+** NEW BLOCKCHAIN ** 7. Sally McCutty (Created by 1, Verified by 2)
+** NEW BLOCKCHAIN ** 8. Helen Keller (Created by 2, Verified by 2)
+Added a record to unverified blocks: (Created by 2) Abraham Lincoln
+[Consumer got a unverified block] Helen Keller
+[Consumer got a unverified block] Bruce Lee
+Added a record to unverified blocks: (Created by 2) John Kennedy
+** NEW BLOCKCHAIN ** 9. Bruce Lee (Created by 1, Verified by 0)
+** NEW BLOCKCHAIN ** 10. Abraham Lincoln (Created by 2, Verified by 0)
+Added a record to unverified blocks: (Created by 2) Joe DiMaggio
+[Consumer got a unverified block] Abraham Lincoln
+[Consumer got a unverified block] John Kennedy
+** NEW BLOCKCHAIN ** 11. John Kennedy (Created by 2, Verified by 2)
+** NEW BLOCKCHAIN ** 12. Joe DiMaggio (Created by 2, Verified by 2)
+[Consumer got a unverified block] Joe DiMaggio
+
+
+There are 4 options:                                                 <<<<<<<< After 10 seconds, Console Commands showing <<<<<<<
+1) Enter C for Credit
+2) Enter R for reading a file (or "R filename" to read another files)
+3) Enter V for verifying the entire blockchain 
+4) Enter L for listing blockchain 
+
+Added a record to unverified blocks: (Created by 0) Alice X          <<<<<< at this moment, I entered "R AdditionalFile.tx" in process 0 <<<<<<<<<<
+[Consumer got a unverified block] Alice X
+** NEW BLOCKCHAIN ** 13. Alice X (Created by 0, Verified by 0)
+
+C                                                                    <<<<<<<<< Enter C to check credit in process 1 <<<<<<<<<<
+Verification credit: P0 = 4, P1 = 3, P2 = 6                          
+
+
+There are 4 options:                                                 
+1) Enter C for Credit
+2) Enter R for reading a file (or "R filename" to read another files)
+3) Enter V for verifying the entire blockchain 
+4) Enter L for listing blockchain 
+V                                                                    <<<<<<<<< Enter V to verify the entire blockchain <<<<<<<<<<
+Is Verifying.... 
+- the Proof-of-Work SHA-256-String.. 
+- the Hash created solves the puzzle.. 
+- the Signed-SHA256 signature.. 
+- the Signed-BlockID signature..
+Blocks 1 - 13 in the blockchain have been verified
+
+
+There are 4 options: 
+1) Enter C for Credit
+2) Enter R for reading a file (or "R filename" to read another files)
+3) Enter V for verifying the entire blockchain 
+4) Enter L for listing blockchain 
+L                                                                    <<<<<<<<< Enter L to list the entire blockchain <<<<<<<<<<
+13.  2020-05-24.10:52:390  Alice X 2020.02.02 222-22-2222 Cold Rest Water
+12.  2020-05-24.10:52:122  Joe DiMaggio 1914.11.25  111-22-3333 SoreKnees RestFromSports Aspirin
+11.  2020-05-24.10:52:112  John Kennedy 1917.05.29  333-45-6999 AddisonsDisease DrugTherapy Steroids
+10.  2020-05-24.10:52:102  Abraham Lincoln 1809.02.12 444-45-6888 GreviousWound Surgery Whiskey
+9.  2020-05-24.10:52:101  Bruce Lee 1940.11.27 456-789-123 SoreStomach LessCombat Vicodine
+8.  2020-05-24.10:52:092  Helen Keller 1880.06.27 666-45-6789 Arthritis WarmCloths Aspirin
+7.  2020-05-24.10:52:081  Sally McCutty 1970.01.01 123-456-999 Migraine IcePack Almotriptan
+6.  2020-05-24.10:52:071  Wei  Xu  1996.03.22 123-456-333 Shingles WaitForRelief Zovirax
+5.  2020-05-24.10:52:070  Wayne Blaine 1942.07.07 123-45-6777 Measles WaitToGetBetter CodLiverOil
+4.  2020-05-24.10:52:061  Rita Vita  1992.01.31 999-456-789 ObessivePersonality TryToRelax Ibuprofen
+3.  2020-05-24.10:52:060  Julie Wilson 1996.03.07 123-45-6999 Insomnia Exercise HotPeppers
+2.  2020-05-24.10:52:050  Joe  Blow  1996.03.07 123-45-6888 Smallpox BedRest Whiskey
+1.  2020-05-24.10:52:040  John Smith 1996.03.07 123-45-6789 Chickenpox BedRest aspirin
+0.  2020-05-24.10:51:551  Hongli Xue 0000.00.00 000-00-0000 0000 0000 00000
+
+
+There are 4 options: 
+1) Enter C for Credit
+2) Enter R for reading a file (or "R filename" to read another files)
+3) Enter V for verifying the entire blockchain 
+4) Enter L for listing blockchain 
+
+
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< PROCESS 2 <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+Honglis-MacBook-Pro:src honglixue$ java -cp ".:gson-2.8.2.jar" Blockchain 2
+
+Starting Process Server at the process 4740
+Starting UnverifiedBlock Server at the process 4822
+Starting Public Key Server at the process 4712
+Starting the Blockchain server 4932
+
+Starting the Unverified Block Priority Queue Consumer thread.
+
+
+All Processes are Ready
+
+Got key from process 2
+Got key from process 1
+Got key from process 0
+Three keys are ready!
+
+----Create A Dummy Block in Blockchain List-----
+
+There are 4 options:                                                     <<<<<<<< Console Commands start <<<<<<<
+1) Enter C for Credit
+2) Enter R for reading a file (or "R filename" to read another files)
+3) Enter V for verifying the entire blockchain 
+4) Enter L for listing blockchain 
+                                                                         <<<<<<<<<<<<< I have not yet enter R in process 2 at this moment <<<<<<<<<<<<<
+Added a record to unverified blocks: (Created by 0) John Smith           <<<<<<<<<<<<< at this moment, I entered R in process 0 <<<<<<<<<<<<<<<<<<<<<
+[Consumer got a unverified block] John Smith
+Added a record to unverified blocks: (Created by 0) Joe Blow
+** NEW BLOCKCHAIN ** 1. John Smith (Created by 0, Verified by 1)
+** NEW BLOCKCHAIN ** 2. Joe Blow (Created by 0, Verified by 1)
+Added a record to unverified blocks: (Created by 0) Julie Wilson
+** NEW BLOCKCHAIN ** 3. Julie Wilson (Created by 0, Verified by 1)
+Added a record to unverified blocks: (Created by 1) Rita Vita            <<<<<<<<<<<<< at this moment, I entered R in process 1 <<<<<<<<<<<<<<<<<<<<< 
+
+R                                                                        <<<<<<<<<<<<< Now, I entered R in process 2 <<<<<<<<<<<<<<
+Reading file: BlockInput2.txt
+
+[Consumer got a unverified block] Joe Blow
+[Consumer got a unverified block] Julie Wilson
+[Consumer got a unverified block] Rita Vita
+Added a record to unverified blocks: (Created by 0) Wayne Blaine
+[Consumer got a unverified block] Wayne Blaine
+** NEW BLOCKCHAIN ** 4. Rita Vita (Created by 1, Verified by 2)
+Added a record to unverified blocks: (Created by 1) Wei Xu
+Added a record to unverified blocks: (Created by 1) Sally McCutty
+** NEW BLOCKCHAIN ** 5. Wayne Blaine (Created by 0, Verified by 0)
+Added a record to unverified blocks: (Created by 2) Helen Keller
+[Consumer got a unverified block] Wei Xu
+[Consumer got a unverified block] Sally McCutty
+** NEW BLOCKCHAIN ** 6. Wei Xu (Created by 1, Verified by 2)
+Added a record to unverified blocks: (Created by 1) Bruce Lee
+[Consumer got a unverified block] Helen Keller
+** NEW BLOCKCHAIN ** 7. Sally McCutty (Created by 1, Verified by 2)
+[Consumer got a unverified block] Bruce Lee
+** NEW BLOCKCHAIN ** 8. Helen Keller (Created by 2, Verified by 2)
+Added a record to unverified blocks: (Created by 2) Abraham Lincoln
+Added a record to unverified blocks: (Created by 2) John Kennedy
+** NEW BLOCKCHAIN ** 9. Bruce Lee (Created by 1, Verified by 0)
+** NEW BLOCKCHAIN ** 10. Abraham Lincoln (Created by 2, Verified by 0)
+[Consumer got a unverified block] Abraham Lincoln
+[Consumer got a unverified block] John Kennedy
+Added a record to unverified blocks: (Created by 2) Joe DiMaggio
+[Consumer got a unverified block] Joe DiMaggio
+** NEW BLOCKCHAIN ** 11. John Kennedy (Created by 2, Verified by 2)
+** NEW BLOCKCHAIN ** 12. Joe DiMaggio (Created by 2, Verified by 2)
+
+
+There are 4 options:                                                   <<<<<<<< After 10 seconds, Console Commands showing <<<<<<<
+1) Enter C for Credit
+2) Enter R for reading a file (or "R filename" to read another files)
+3) Enter V for verifying the entire blockchain 
+4) Enter L for listing blockchain 
+
+Added a record to unverified blocks: (Created by 0) Alice X            <<<<<< at this moment, I entered "R AdditionalFile.tx" in process 0 <<<<<<<<<<
+[Consumer got a unverified block] Alice X
+** NEW BLOCKCHAIN ** 13. Alice X (Created by 0, Verified by 0)
+
+C                                                                       <<<<<<<<< Enter C to check credit in process 2 <<<<<<<<<<
+Verification credit: P0 = 4, P1 = 3, P2 = 6
+
+
+There are 4 options: 
+1) Enter C for Credit
+2) Enter R for reading a file (or "R filename" to read another files)
+3) Enter V for verifying the entire blockchain 
+4) Enter L for listing blockchain 
+V                                                                       <<<<<<<<< Enter V to verify the entire blockchain <<<<<<<<<<
+Is Verifying.... 
+- the Proof-of-Work SHA-256-String.. 
+- the Hash created solves the puzzle.. 
+- the Signed-SHA256 signature.. 
+- the Signed-BlockID signature..
+Blocks 1 - 13 in the blockchain have been verified
+
+There are 4 options: 
+1) Enter C for Credit
+2) Enter R for reading a file (or "R filename" to read another files)
+3) Enter V for verifying the entire blockchain 
+4) Enter L for listing blockchain 
+L                                                                       <<<<<<<<< Enter L to list the entire blockchain <<<<<<<<<<
+13.  2020-05-24.10:52:390  Alice X 2020.02.02 222-22-2222 Cold Rest Water
+12.  2020-05-24.10:52:122  Joe DiMaggio 1914.11.25  111-22-3333 SoreKnees RestFromSports Aspirin
+11.  2020-05-24.10:52:112  John Kennedy 1917.05.29  333-45-6999 AddisonsDisease DrugTherapy Steroids
+10.  2020-05-24.10:52:102  Abraham Lincoln 1809.02.12 444-45-6888 GreviousWound Surgery Whiskey
+9.  2020-05-24.10:52:101  Bruce Lee 1940.11.27 456-789-123 SoreStomach LessCombat Vicodine
+8.  2020-05-24.10:52:092  Helen Keller 1880.06.27 666-45-6789 Arthritis WarmCloths Aspirin
+7.  2020-05-24.10:52:081  Sally McCutty 1970.01.01 123-456-999 Migraine IcePack Almotriptan
+6.  2020-05-24.10:52:071  Wei  Xu  1996.03.22 123-456-333 Shingles WaitForRelief Zovirax
+5.  2020-05-24.10:52:070  Wayne Blaine 1942.07.07 123-45-6777 Measles WaitToGetBetter CodLiverOil
+4.  2020-05-24.10:52:061  Rita Vita  1992.01.31 999-456-789 ObessivePersonality TryToRelax Ibuprofen
+3.  2020-05-24.10:52:060  Julie Wilson 1996.03.07 123-45-6999 Insomnia Exercise HotPeppers
+2.  2020-05-24.10:52:050  Joe  Blow  1996.03.07 123-45-6888 Smallpox BedRest Whiskey
+1.  2020-05-24.10:52:040  John Smith 1996.03.07 123-45-6789 Chickenpox BedRest aspirin
+0.  2020-05-24.10:51:552  Hongli Xue 0000.00.00 000-00-0000 0000 0000 00000
+
+
+There are 4 options: 
+1) Enter C for Credit
+2) Enter R for reading a file (or "R filename" to read another files)
+3) Enter V for verifying the entire blockchain 
+4) Enter L for listing blockchain 
